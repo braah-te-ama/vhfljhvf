@@ -14,7 +14,7 @@
 
     <header class="menu-principal-pc">
         <div class="izquierda-pc">
-      <div class="opciones-pc"><svg class="logo-menu-oculto" xmlns="http://www.w3.org/2000/svg" width="800px" height="800px" viewBox="0 0 24 24" fill="none">
+      <div class="opciones-pc"><svg id="logo-menu-oculto" class="logo-menu-oculto" xmlns="http://www.w3.org/2000/svg" width="800px" height="800px" viewBox="0 0 24 24" fill="none">
 <path d="M4 6H20M4 12H20M4 18H20" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg></div>
       <div class="opciones-pc"><p id="ocultar-opciones-celu" class="opciones-menu-p-pc">Inicio</p></div>
@@ -31,6 +31,15 @@
 <path d="M6.29977 5H21L19 12H7.37671M20 16H8L6 3H3M9 20C9 20.5523 8.55228 21 8 21C7.44772 21 7 20.5523 7 20C7 19.4477 7.44772 19 8 19C8.55228 19 9 19.4477 9 20ZM20 20C20 20.5523 19.5523 21 19 21C18.4477 21 18 20.5523 18 20C18 19.4477 18.4477 19 19 19C19.5523 19 20 19.4477 20 20Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg></div>
         </div>
+    </header>
+
+    <header id="menu-principal-pc-oculto" class="menu-principal-pc-oculto">
+      <div id="todas-opciones-menu-oculto" class="todas-opciones-menu-oculto">
+      <a href="" class="opciones-menu-pc-oculto">Inicio</a>
+      <a href="" class="opciones-menu-pc-oculto">Mates</a>
+      <a href="" class="opciones-menu-pc-oculto">Materas</a>
+      <input placeholder="Buscador..." type="text" class="buscador-menu-pc-oculto">
+      </div>
     </header>
 
     <div id="productos-pc-contenedor" class="productos-pc-contenedor">
@@ -390,6 +399,26 @@
 
 
 <script>
+
+const botonnn = document.getElementById("logo-menu-oculto");
+const menu = document.getElementById("menu-principal-pc-oculto");
+const opciones = document.getElementById("todas-opciones-menu-oculto");
+
+
+botonnn.addEventListener("click", () => {
+    if (menu.style.height === "" || menu.style.height === "70px") {
+        menu.style.height = "300px";  // altura cuando se abre (cambia esto a lo que quieras)
+        botonnn.style.transform = "rotate(90deg)";
+        opciones.style.display = "flex"
+    } else {
+        menu.style.height = "70px";    // vuelve a la altura cerrada
+        botonnn.style.transform = "rotate(0deg)";
+        opciones.style.display = "none"
+
+
+    }
+});
+
 
 document.getElementById("Transferencia-Bancaria-oculto").addEventListener("click", function () {
 document.getElementById("transferencia-bancaria-alias-pc-oculto").style.display = "block";
