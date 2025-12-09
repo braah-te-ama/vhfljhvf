@@ -23,6 +23,22 @@ header.menu-principal-pc {
     filter: drop-shadow(0px 0px 17px rgba(0, 0, 0, 0.26));
     z-index: 9999;
 }
+header.menu-principal-pc-oculto {
+    display: flex;
+    justify-content: space-between;
+    background: #ffffff;
+    height: 80px;
+    padding: 0px 20px;
+    width: 95%;
+    margin: 10px 2.5%;
+    border-radius: 20px;
+    position: fixed;
+    top: 0;
+    filter: drop-shadow(0px 0px 17px rgba(0, 0, 0, 0.26));
+    z-index: 9999;
+    display: none;
+    transition: .3s;
+}
 
 .izquierda-pc .centro-pc {
     display: flex;
@@ -89,6 +105,7 @@ svg.logo-menu-oculto {
     width: 25px;
     height: 25px;
     display: none;
+    transition: .3s;
 }
 p.opciones-menu-p-pc:hover::before {
     width: 100%;
@@ -116,7 +133,7 @@ p.opciones-menu-p-pc:hover::before {
     height: 100%;
     border-radius: 20px;
     margin: 0px 1% 0px 0px;
-
+    transition: .3s;
 }
 .toda-info-pc{
     width: 29%;
@@ -825,8 +842,20 @@ p.precio-productos-similares-p {
     padding: 10px;
 }
 }
-
-@media (max-width: 615px) {
+@media (max-width: 747px) {
+ .fotos-producto-pc {
+    width: 62%;
+    height: 100%;
+    border-radius: 20px;
+    margin: 0px 1% 0px 0px;
+}
+.toda-info-pc {
+    width: 36%;
+    height: 100%;
+    transition: .3s;
+}   
+}
+@media (max-width: 633px) {
 
 .producto-detalle-pc {
     width: 90%;
@@ -905,6 +934,46 @@ header.menu-principal-pc {
     filter: drop-shadow(0px 0px 17px rgba(0, 0, 0, 0.26));
     z-index: 9999;
 }
+    header.menu-principal-pc-oculto {
+        display: flex;
+        background: #000000b0;
+        height: 80px;
+        padding: 0px 20px;
+        width: 90%;
+        margin: 10px 5%;
+        border-radius: 20px;
+        position: fixed;
+        top: 0;
+        filter: drop-shadow(0px 0px 17px rgba(0, 0, 0, 0.26));
+        z-index: 9998;
+        backdrop-filter: blur(10px);
+        transition: .3s;
+        overflow: hidden;
+    }
+    .todas-opciones-menu-oculto {
+    width: 100%;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    margin: 90px 0px 0px 0px;
+}
+a.opciones-menu-pc-oculto {
+    color: white;
+    text-decoration: none;
+    margin: 15px 0px 15px 0px;
+    font-family: 'Momo Trust Display';
+    font-size: 1rem;
+}
+input.buscador-menu-pc-oculto {
+    height: 44px;
+    border-radius: 10px;
+    border: none;
+    background: #ffffff1f;
+    color: white;
+    font-family: 'Momo Trust Display';
+    outline: none;
+    padding: 10px;
+}
 p.alguna-duda-p-pc {
     font-size: .8rem;
     font-family: 'Momo Trust Display';
@@ -940,6 +1009,7 @@ svg.logo-menu-oculto {
     width: 25px;
     height: 25px;
     display: block;
+    transition: .3s;
 }
 h5.nombre-producto-pc {
     color: white;
@@ -961,4 +1031,5 @@ h5.nombre-producto-pc {
         padding: 10px;
         font-size: .7rem;
     }
+
 }
